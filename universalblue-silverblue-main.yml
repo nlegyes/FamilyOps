@@ -60,3 +60,4 @@
           - org.gtk.Gtk3theme.Adwaita-dark
           - org.libreoffice.LibreOffice
           - org.mozilla.firefox
+          - com.github.maoschanz.drawing
