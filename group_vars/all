@@ -48,6 +48,7 @@ flatpak_package_install:
   - { remote: 'flathub', package: 'org.mozilla.firefox' }
   - { remote: 'flathub', package: 'com.github.maoschanz.drawing' }
   - { remote: 'flathub', package: 'org.gnome.Firmware' }
+  - { remote: 'flathub', package: 'io.github.nate_xyz.Resonance' }
 
 # The 'gnome_settings' role #
 #######################
