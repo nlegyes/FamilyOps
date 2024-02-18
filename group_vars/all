@@ -30,7 +30,7 @@ flatpak_package_install:
   - { remote: 'flathub', package: 'io.github.celluloid_player.Celluloid' }
   - { remote: 'flathub', package: 'io.github.giantpinkrobots.flatsweep' }
   - { remote: 'flathub', package: 'io.missioncenter.MissionCenter' }
-  - { remote: 'flathub', package: 'org.freedesktop.Platform.ffmpeg-full' }
+  - { remote: 'flathub', package: 'org.freedesktop.Platform.ffmpeg-full/x86_64/23.08' }
   - { remote: 'flathub', package: 'org.freedesktop.Platform.openh264' }
   - { remote: 'flathub', package: 'org.gnome.Calculator' }
   - { remote: 'flathub', package: 'org.gnome.Calendar' }
