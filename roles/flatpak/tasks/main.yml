@@ -1,0 +1,16 @@
+- name: Add Flatpak remote for Flathub
+  community.general.flatpak_remote:
+    name: "{{ item.name }}"
+    state: present
+    flatpakrepo_url: "{{ item.url }}"
+  loop: "{{ flatpak_remote_install }}"
+
+- name: Update metadata to show newly-available software
+  ansible.builtin.command: flatpak update --appstream
+
+- name: Install Flatpak packages
+  community.general.flatpak:
+    name: "{{ item.package }}"
+    state: present
+    remote: "{{ item.remote }}"
+  loop: "{{ flatpak_package_install }}"

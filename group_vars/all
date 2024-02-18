@@ -1,0 +1,36 @@
+# The 'flatpak' role #
+######################
+flatpak_remote_install:
+  - { name: 'flathub', url: 'https://flathub.org/repo/flathub.flatpakrepo' }
+# - { name: 'fedora', url: 'oci+https://registry.fedoraproject.org' }
+# - { name: 'flathub-beta', url: 'https://flathub.org/beta-repo/flathub-beta.flatpakrepo' }
+# - { name: 'gnome-nightly', url: 'https://nightly.gnome.org/gnome-nightly.flatpakrepo' }
+# - { name: 'kdeapps', url: 'https://distribute.kde.org/kdeapps.flatpakrepo' }
+
+flatpak_package_install:
+  - { remote: 'flathub', package: 'com.bitwarden.desktop' }
+  - { remote: 'flathub', package: 'com.github.tchx84.Flatseal' }
+  - { remote: 'flathub', package: 'com.mattjakeman.ExtensionManager' }    
+  - { remote: 'flathub', package: 'com.spotify.Client' }
+  - { remote: 'flathub', package: 'io.github.celluloid_player.Celluloid' }
+  - { remote: 'flathub', package: 'io.github.giantpinkrobots.flatsweep' }
+  - { remote: 'flathub', package: 'io.missioncenter.MissionCenter' }
+  - { remote: 'flathub', package: 'org.freedesktop.Platform.ffmpeg-full' }
+  - { remote: 'flathub', package: 'org.freedesktop.Platform.openh264' }
+  - { remote: 'flathub', package: 'org.gnome.Calculator' }
+  - { remote: 'flathub', package: 'org.gnome.Calendar' }
+  - { remote: 'flathub', package: 'org.gnome.Contacts' }
+  - { remote: 'flathub', package: 'org.gnome.DejaDup' }
+  - { remote: 'flathub', package: 'org.gnome.Evince' }
+  - { remote: 'flathub', package: 'org.gnome.Loupe' }
+  - { remote: 'flathub', package: 'org.gnome.SimpleScan' }
+  - { remote: 'flathub', package: 'org.gnome.TextEditor' }
+  - { remote: 'flathub', package: 'org.gnome.Weather' }
+  - { remote: 'flathub', package: 'org.gnome.baobab' }
+  - { remote: 'flathub', package: 'org.gnome.clocks' }
+  - { remote: 'flathub', package: 'org.gtk.Gtk3theme.Adwaita-dark' }
+  - { remote: 'flathub', package: 'org.libreoffice.LibreOffice' }
+  - { remote: 'flathub', package: 'org.mozilla.firefox' }
+  - { remote: 'flathub', package: 'com.github.maoschanz.drawing' }
+  - { remote: 'flathub', package: 'org.gnome.Firmware' }
+
