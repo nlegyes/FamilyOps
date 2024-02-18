@@ -1,0 +1,10 @@
+- name: Installing GNOME extensions
+  gnome_extensions:
+    - url: "{{ item.url }}"
+      enable: "{{ item.enable }}"
+      name: "{{ item.name }}"
+  loop: "{{ gnome_extensions }}"
+
+- name: Enable tailscale in GNOME quick settings
+  ansible.builtin.command: tailscale set --operator=$USER
+  become: true
