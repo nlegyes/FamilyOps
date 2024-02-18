@@ -57,6 +57,9 @@ dconf_settings:
 - { key: '/org/gnome/desktop/privacy/remove-old-trash-files', value: 'true' }
 - { key: '/org/gnome/desktop/privacy/remove-old-temp-files', value: 'true' }
 - { key: '/org/gnome/desktop/privacy/old-files-age', value: 'uint32 14' }
+- { key: '/org/gnome/desktop/interface/color-scheme', value: 'prefer-dark' }
+- { key: '/org/gnome/desktop/interface/gtk-theme', value: 'Adwaita-dark' }
+- { key: '/org/gnome/system/location/enabled', value: 'true' }
 
 gnome_extensions:
   - { enable: 'yes', name: 'tailscale@joaophi.github.com', url: 'https://extensions.gnome.org/extension/6139/tailscale-qs/' }
