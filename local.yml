@@ -1,0 +1,10 @@
+---
+
+- hosts: localhost
+  connection: local
+  roles:
+    - { role: layered_packages }
+    - { role: flatpaks }
+    - { role: gnome_extensions }
+    - { role: gnome_settings }
+    - { role: ansible_provisioning }
