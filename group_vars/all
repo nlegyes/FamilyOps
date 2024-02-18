@@ -1,3 +1,18 @@
+# The 'layered_packages' role #
+###############################
+layered_package_install:
+  - ansible
+  - ansible-collection-community-general
+  - gnome-themes-extra
+  - langpacks-hu
+  - tailscale
+  - unrar
+
+base_package_remove:
+  - firefox
+  - firefox-langpacks
+
+
 # The 'flatpak' role #
 ######################
 flatpak_remote_install:
@@ -33,4 +48,18 @@ flatpak_package_install:
   - { remote: 'flathub', package: 'org.mozilla.firefox' }
   - { remote: 'flathub', package: 'com.github.maoschanz.drawing' }
   - { remote: 'flathub', package: 'org.gnome.Firmware' }
+
+# The 'gnome_settings' role #
+#######################
+dconf_settings:
+- { key: '/org/gnome/desktop/privacy/remember-recent-files', value: 'true' }
+- { key: '/org/gnome/desktop/privacy/remove-old-trash-files', value: 'true' }
+- { key: '/org/gnome/desktop/privacy/remove-old-temp-files', value: 'true' }
+- { key: '/org/gnome/desktop/privacy/old-files-age', value: 'uint32 14' }
+
+gnome_extensions:
+  - { enable: 'yes', name: 'tailscale@joaophi.github.com', url: 'https://extensions.gnome.org/extension/6139/tailscale-qs/' }
+  - { enable: 'yes', name: 'caffeine@patapon.info', url: 'https://extensions.gnome.org/extension/517/caffeine/' }
+
+
 
