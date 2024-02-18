@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs ansible-pull to provision workstation
+Wants=ansible-pull.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/ansible-pull -o -U https://github.com/nlegyes/FamilyOps.git 
+
+[Install]
+WantedBy=multi-user.target

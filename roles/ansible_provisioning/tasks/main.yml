@@ -1,0 +1,40 @@
+- name: add ansible user
+  become: true
+  user:
+    name: ansible
+    system: yes
+ 
+- name: set up sudo for ansible user
+  become: true
+  copy:
+    src: files/sudoer_ansible
+    dest: /etc/sudoers.d/ansible
+    owner: root
+    group: root
+    mode: 0440
+ 
+- name: Copy ansible service
+  become: true
+  copy:
+    src: files/ansible-pull.service
+    dest: /etc/systemd/system/ansible-pull.service
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Copy ansible timer
+  become: true
+  copy:
+    src: files/ansible-pull.timer
+    dest: /etc/systemd/system/ansible-pull.timer
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Enabling ansible-pull.timer
+  become: true
+  systemd:
+    name: ansible-pull.timer
+    state: started
+    enabled: yes
+    daemon_reload: yes

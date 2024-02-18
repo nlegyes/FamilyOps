@@ -1,0 +1,10 @@
+[Unit]
+Description=starts ansible-pull to provision workstation
+Requires=ansible-pull.service
+
+[Timer]
+Unit=ansible-pull.service
+OnCalendar=*:0/10:00
+
+[Install]
+WantedBy=timers.target
