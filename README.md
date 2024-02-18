@@ -7,7 +7,7 @@ This repository hosts an Ansible Playbook designed to streamline the setup proce
 To use this playbook, follow this simple step:
 
    ```bash
-    ansible-pull -U https://github.com/nlegyes/FamilyOps.git universalblue-silverblue-main.yml
+    ansible-pull -U https://github.com/nlegyes/FamilyOps.git --ask-become-pass
    ```
 
 ## Requirements
