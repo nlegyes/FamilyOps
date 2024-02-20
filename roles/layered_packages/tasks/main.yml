@@ -10,14 +10,10 @@
 
 - name: Remove applications from the base OS
   community.general.rpm_ostree_pkg:
-    name: "{{ item }}"
+    name: "{{ base_package_remove }}"
     state: absent
-    # apply_live: true  # This feature is not yet available
-  loop: "{{ base_package_remove }}"
 
 - name: Install desired applications as layered packages
   community.general.rpm_ostree_pkg:
-    name: "{{ item }}"
+    name: "{{ layered_package_install }}"
     state: present
-    # apply_live: true  # This feature is not yet available
-  loop: "{{ layered_package_install }}"
