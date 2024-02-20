@@ -15,7 +15,7 @@ To use this playbook, follow this simple step:
 - Ansible installed on the system. Install it using:
 
   ```bash
-  sudo rpm-ostree install ansible ansible-collection-community-general
+  sudo rpm-ostree install --apply-live ansible ansible-collection-community-general
   ```
 
 ## License
