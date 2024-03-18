@@ -35,7 +35,7 @@ flatpak_package_install:
   - { remote: 'flathub', package: 'org.gnome.Calculator' }
   - { remote: 'flathub', package: 'org.gnome.Calendar' }
   - { remote: 'flathub', package: 'org.gnome.Contacts' }
-  - { remote: 'flathub', package: 'org.gnome.DejaDup' }
+  - { remote: 'flathub', package: 'org.gnome.World.PikaBackup' }
   - { remote: 'flathub', package: 'org.gnome.Evince' }
   - { remote: 'flathub', package: 'org.gnome.Loupe' }
   - { remote: 'flathub', package: 'org.gnome.SimpleScan' }
